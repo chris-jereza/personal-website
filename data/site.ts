@@ -415,6 +415,17 @@ export const site: {
           platform: "youtube",
         },
         {
+          title: "2Degrees (Hype Edit)",
+          url: "https://drive.google.com/file/d/1ydzsv5rLfgECrxmrANPUTV5Ai7Qnuiz5/view?usp=sharing",
+          platform: "drive",
+          note: "Nightlife filming and editing",
+        },
+        {
+          title: "Ace + Jen Engagement Party",
+          url: "https://drive.google.com/file/d/1VZd4_kMBIC6QbtJkCQgy3oCoYDOCiFiS/view?usp=sharing",
+          platform: "drive",
+        },
+        {
           title: "Crypto Casino Campaign",
           url: "https://drive.google.com/file/d/1qflrJa8YLCCWHAxKMDVXbW-m3GaOXN7q/view?usp=sharing",
           platform: "drive",
