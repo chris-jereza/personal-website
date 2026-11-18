@@ -131,11 +131,6 @@ export const site: {
           platform: "youtube",
         },
         {
-          title: "We Tested ChatGPT 5.6 For A Month",
-          url: "https://youtu.be/uUW0rLfgg2g",
-          platform: "youtube",
-        },
-        {
           title: "How I Passed The Google Coding Interviews",
           url: "https://www.youtube.com/watch?v=ksZ2wFRZ3gM",
           platform: "youtube",
@@ -276,9 +271,9 @@ export const site: {
       ],
     },
     {
-      title: "Tech Raps",
+      title: "Rappers Teach Engineering",
       description:
-        "Custom campaigns for tech and cybersecurity companies, plus the Rappers Teach Engineering series.",
+        "Original engineering shorts and custom rap campaigns for tech and cybersecurity companies.",
       items: [
         {
           title: "Keeper Security rap",
@@ -455,6 +450,11 @@ export const site: {
         {
           title: "Mini-Doc for Artist Collective",
           url: "https://youtu.be/ubsGFC2yZb0",
+          platform: "youtube",
+        },
+        {
+          title: "We Tested ChatGPT 5.6 For A Month",
+          url: "https://youtu.be/uUW0rLfgg2g",
           platform: "youtube",
         },
         {
