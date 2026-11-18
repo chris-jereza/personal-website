@@ -13,6 +13,7 @@ export type PortfolioItem = {
   viewsLabel?: string;
   liveViews?: boolean;
   note?: string;
+  featured?: boolean;
 };
 
 export type PortfolioSection = {
@@ -113,10 +114,11 @@ export const site: {
       description: "Favorite long-form pieces across shows, interviews, and film.",
       items: [
         {
-          title: "Happy To Announce: Short Film by Chris Jereza",
+          title: "Happy To Announce",
           url: "https://youtu.be/VXJwJSI1Dqo",
           platform: "youtube",
-          note: "Made in <36 hours on a $50 budget",
+          note: "Made in under 36 hours on a $50 budget.",
+          featured: true,
         },
         {
           title: "Korean Girl Picks a Date Based on Their Tteokbokki (Plate to Date)",

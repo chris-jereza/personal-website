@@ -122,10 +122,12 @@ function VideoCard({
   item,
   playing,
   onToggle,
+  featured = false,
 }: {
   item: ResolvedPortfolioItem;
   playing: boolean;
   onToggle: () => void;
+  featured?: boolean;
 }) {
   const portrait = isPortraitVideo(item);
   const viewLabel =
@@ -140,7 +142,7 @@ function VideoCard({
     : null;
 
   return (
-    <article className="video-card group min-w-0">
+    <article className={`video-card group min-w-0${featured ? " featured-video" : ""}`}>
       <div className={`video-media relative ${mediaClass}`}>
         {playing && playerSrc ? (
           <>
@@ -174,7 +176,7 @@ function VideoCard({
                 src={item.thumbnailUrl}
                 alt=""
                 className="video-thumbnail h-full w-full object-cover"
-                loading="lazy"
+                loading={featured ? "eager" : "lazy"}
               />
             ) : (
               <span className="absolute inset-0 bg-[var(--surface-2)]" />
@@ -203,14 +205,17 @@ function VideoCard({
         )}
       </div>
 
-      <div className="pt-3">
+      <div className="video-details pt-3">
+        {featured ? <p className="eyebrow">Featured short film</p> : null}
         <h3 className="line-clamp-2 text-[15px] font-semibold leading-[1.35] text-[var(--ink)] sm:text-base">
           {item.title}
         </h3>
-        <p className="mt-1 text-[13px] leading-5 text-[var(--muted)]">
-          {platformLabel(item.platform)}{viewLabel ? ` · ${viewLabel}` : ""}
-        </p>
-        {item.note ? <p className="line-clamp-2 text-[13px] leading-5 text-[var(--muted-soft)]">{item.note}</p> : null}
+        {featured ? null : (
+          <p className="mt-1 text-[13px] leading-5 text-[var(--muted)]">
+            {platformLabel(item.platform)}{viewLabel ? ` · ${viewLabel}` : ""}
+          </p>
+        )}
+        {item.note ? <p className="video-note line-clamp-2 text-[13px] leading-5 text-[var(--muted-soft)]">{item.note}</p> : null}
       </div>
     </article>
   );
@@ -410,9 +415,11 @@ export function HomeTabs(props: HomeTabsProps) {
               const visibleItems = hasMore && !isExpanded
                 ? section.items.slice(0, section.initialItemCount)
                 : section.items;
+              const featured = props.clientBrief ? undefined : visibleItems.find((item) => item.featured);
+              const gridItems = visibleItems.filter((item) => item !== featured);
               const grids = [
-                { className: "landscape-grid", items: visibleItems.filter((item) => !isPortraitVideo(item)) },
-                { className: "portrait-grid", items: visibleItems.filter(isPortraitVideo) },
+                { className: "landscape-grid", items: gridItems.filter((item) => !isPortraitVideo(item)) },
+                { className: "portrait-grid", items: gridItems.filter(isPortraitVideo) },
               ];
               if (section.portraitFirst) grids.reverse();
               return (
@@ -424,6 +431,14 @@ export function HomeTabs(props: HomeTabsProps) {
                     </div>
                     <span>{section.items.length} videos</span>
                   </div>
+                  {featured ? (
+                    <VideoCard
+                      item={featured}
+                      featured
+                      playing={playingUrls.includes(featured.url)}
+                      onToggle={() => togglePlayer(featured.url)}
+                    />
+                  ) : null}
                   {grids.filter(({ items }) => items.length > 0).map(({ className, items }) => (
                     <div key={className} className={className}>
                       {items.map((item) => (
