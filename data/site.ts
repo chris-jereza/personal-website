@@ -47,12 +47,17 @@ export type ResumeSection = {
   lines: string[];
 };
 
+export type ProductionRole = {
+  role: string;
+  organization: string;
+  current?: boolean;
+};
+
 export const site: {
   name: string;
-  tagline: string;
   profileImageUrl: string;
   profileImageAlt: string;
-  previousRoles: { role: string; organization: string }[];
+  productionRoles: ProductionRole[];
   availability: string;
   highlights: string[];
   socials: SocialLink[];
@@ -70,10 +75,10 @@ export const site: {
   tare: { title: string; href: string; logoUrl: string; images: string[] };
 } = {
   name: "Chris Jereza",
-  tagline: "Video Producer at The Verge / Editor",
   profileImageUrl: "/Chris Profile Photo 1.jpg",
   profileImageAlt: "Chris Jereza",
-  previousRoles: [
+  productionRoles: [
+    { role: "Video Producer", organization: "The Verge", current: true },
     { role: "Lead Producer and Host", organization: "BuzzFeed" },
     { role: "Growth Marketing Producer", organization: "Bryan Johnson’s Blueprint" },
   ],

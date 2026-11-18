@@ -211,8 +211,7 @@ export async function PortfolioHome({ clientBrief }: { clientBrief?: ClientBrief
   return (
     <HomeTabs
       name={site.name}
-      tagline={site.tagline}
-      previousRoles={site.previousRoles}
+      productionRoles={site.productionRoles}
       availability={site.availability}
       highlights={site.highlights}
       socials={resolvedSocials}

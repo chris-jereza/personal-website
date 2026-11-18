@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type {
   PortfolioItem,
   PortfolioSection,
+  ProductionRole,
   ResumeExperience,
   ResumeSection,
   SoftwareItem,
@@ -95,8 +96,7 @@ export type ClientBrief = {
 
 type HomeTabsProps = {
   name: string;
-  tagline: string;
-  previousRoles: { role: string; organization: string }[];
+  productionRoles: ProductionRole[];
   availability: string;
   highlights: string[];
   socials: ResolvedSocial[];
@@ -296,16 +296,15 @@ export function HomeTabs(props: HomeTabsProps) {
           </div>
 
           <div className="min-w-0 flex-1">
-            <p className="eyebrow">{props.tagline}</p>
             <h1 id="profile-title">{props.name}</h1>
-            <div className="profile-experience">
-              <p id="previous-roles-label">Previously</p>
-              <ul aria-labelledby="previous-roles-label">
-                {props.previousRoles.map(({ role, organization }) => (
-                  <li key={organization}>{role} at <strong>{organization}</strong></li>
-                ))}
-              </ul>
-            </div>
+            <ul className="profile-experience" aria-label="Production experience">
+              {props.productionRoles.map(({ role, organization, current }) => (
+                <li key={organization}>
+                  {role} at <strong>{organization}</strong>
+                  {current ? <small className="role-status"> · Current</small> : null}
+                </li>
+              ))}
+            </ul>
             <a
               className="availability-link"
               href={`mailto:${props.email}?subject=Freelance%20video%20editing%20inquiry`}

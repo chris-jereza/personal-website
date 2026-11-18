@@ -87,10 +87,9 @@ button:focus-visible, a:focus-visible {
 .profile-photo { position: relative; width: 128px; aspect-ratio: 1; overflow: hidden; border-radius: 50%; background: var(--surface-2); box-shadow: 0 0 0 1px var(--line-strong); }
 .eyebrow { margin: 0 0 10px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
 .profile-panel h1 { margin: 0; font-size: clamp(44px, 6vw, 82px); font-weight: 720; line-height: .96; letter-spacing: -.06em; }
-.profile-experience { margin-top: 20px; }
-.profile-experience p { margin: 0 0 4px; color: var(--muted); font-size: 13px; font-weight: 600; }
-.profile-experience ul { display: grid; gap: 3px; margin: 0; padding: 0; color: #c8c8c5; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; }
+.profile-experience { display: grid; gap: 3px; margin: 20px 0 0; padding: 0; color: #c8c8c5; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.5; }
 .profile-experience strong { color: var(--ink); font-weight: 650; }
+.role-status { margin-inline-start: 4px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .availability-link { display: inline-flex; align-items: center; gap: 9px; max-width: 100%; margin-top: 18px; color: var(--ink); font-size: 14px; font-weight: 600; }
 .availability-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .availability-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 2px; }
@@ -216,8 +215,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px
   .profile-panel { grid-template-columns: 1fr; gap: 18px; padding-top: 36px; }
   .profile-photo { width: 72px; }
   .profile-panel h1 { font-size: 42px; }
-  .profile-experience { margin-top: 18px; }
-  .profile-experience ul { font-size: 15px; }
+  .profile-experience { margin-top: 18px; font-size: 15px; }
   .proof-grid { font-size: 12px; }
   .proof-grid dd { font-size: 15px; }
   .social-strip { grid-template-columns: 1fr; padding: 12px 0; }
