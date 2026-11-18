@@ -118,11 +118,6 @@ export const site: {
           note: "Made in <36 hours on a $50 budget",
         },
         {
-          title: "We Tested ChatGPT 5.6 For A Month",
-          url: "https://youtu.be/uUW0rLfgg2g",
-          platform: "youtube",
-        },
-        {
           title: "Korean Girl Picks a Date Based on Their Tteokbokki (Plate to Date)",
           url: "https://youtu.be/NC-iKvZNhy4?si=Hb5_l8mLB_mvRFfc",
           platform: "youtube",
@@ -130,6 +125,11 @@ export const site: {
         {
           title: "Uber CEO Interview (Decoder)",
           url: "https://www.youtube.com/watch?v=NRIF-DfMsQ0&t=3s",
+          platform: "youtube",
+        },
+        {
+          title: "We Tested ChatGPT 5.6 For A Month",
+          url: "https://youtu.be/uUW0rLfgg2g",
           platform: "youtube",
         },
         {
@@ -152,9 +152,33 @@ export const site: {
     {
       title: "The Verge: Tech News + Decoder",
       description:
-        "Rapid-turn tech news from IFA Berlin, shot and edited against same-day or next-day embargoes. Also social and long-form cuts for Decoder.",
+        "Tech reporting, including IFA Berlin coverage shot and edited against same-day or next-day embargoes, plus social and long-form cuts for Decoder.",
       initialItemCount: 10,
       items: [
+        {
+          title: "GTA VI Review",
+          url: "https://www.instagram.com/reel/Df4VxSuJ5iB/",
+          platform: "instagram",
+          liveViews: true,
+        },
+        {
+          title: "Ring’s Security Drone",
+          url: "https://www.instagram.com/reel/DfkAjfphHEL/",
+          platform: "instagram",
+          liveViews: true,
+        },
+        {
+          title: "Reddit Will Force Logins",
+          url: "https://www.instagram.com/reel/DfSafTouwF-/",
+          platform: "instagram",
+          liveViews: true,
+        },
+        {
+          title: "Instagram Gave Up on Deepfakes",
+          url: "https://www.instagram.com/reel/DfHuakXhbVl/",
+          platform: "instagram",
+          liveViews: true,
+        },
         {
           title: "Daily Objects",
           url: "https://www.instagram.com/reel/Dc8Y20oFJoH/",
