@@ -19,6 +19,7 @@ export type PortfolioSection = {
   title: string;
   description?: string;
   initialItemCount?: number;
+  portraitFirst?: boolean;
   items: PortfolioItem[];
 };
 
@@ -123,18 +124,13 @@ export const site: {
           platform: "youtube",
         },
         {
-          title: "Uber CEO Interview (Decoder)",
-          url: "https://www.youtube.com/watch?v=NRIF-DfMsQ0&t=3s",
+          title: "Asian Dad Speed Dates 5 Guys for His Daughter",
+          url: "https://youtu.be/MHkhZJcFQSk?si=t_KNpLcMYEjXuNdM",
           platform: "youtube",
         },
         {
           title: "We Tested ChatGPT 5.6 For A Month",
           url: "https://youtu.be/uUW0rLfgg2g",
-          platform: "youtube",
-        },
-        {
-          title: "Asian Dad Speed Dates 5 Guys for His Daughter",
-          url: "https://youtu.be/MHkhZJcFQSk?si=t_KNpLcMYEjXuNdM",
           platform: "youtube",
         },
         {
@@ -153,7 +149,8 @@ export const site: {
       title: "The Verge: Tech News + Decoder",
       description:
         "Tech reporting, including IFA Berlin coverage shot and edited against same-day or next-day embargoes, plus social and long-form cuts for Decoder.",
-      initialItemCount: 10,
+      initialItemCount: 11,
+      portraitFirst: true,
       items: [
         {
           title: "GTA VI Review",
@@ -222,6 +219,11 @@ export const site: {
           viewsLabel: "37.7K views",
         },
         {
+          title: "Uber CEO Interview (Decoder)",
+          url: "https://www.youtube.com/watch?v=NRIF-DfMsQ0&t=3s",
+          platform: "youtube",
+        },
+        {
           title: "Acer DualPlay",
           url: "https://www.instagram.com/reel/DczDw1ApmyC/",
           platform: "instagram",
@@ -272,9 +274,9 @@ export const site: {
       ],
     },
     {
-      title: "Custom Rap Verses for Tech/Cybersecurity Companies",
+      title: "Tech Raps",
       description:
-        "Custom rap campaigns produced for startups and security companies.",
+        "Custom campaigns for tech and cybersecurity companies, plus the Rappers Teach Engineering series.",
       items: [
         {
           title: "Keeper Security rap",
@@ -292,9 +294,27 @@ export const site: {
           platform: "instagram",
         },
         {
-          title: "21 Savage Teaches Security Engineering",
+          title: "If 21 Savage Taught Security Engineering",
           url: "https://www.instagram.com/p/DTBcGeDioin/",
           platform: "instagram",
+        },
+        {
+          title: "21 Savage Teaches Security Engineering",
+          url: "https://www.instagram.com/reel/C6HjhEvgFb7/",
+          platform: "instagram",
+          viewsLabel: "2M views",
+        },
+        {
+          title: "Baby Keem Teaches System Design",
+          url: "https://www.instagram.com/reel/C5jZ-CRgzqh/",
+          platform: "instagram",
+          viewsLabel: "983K views",
+        },
+        {
+          title: "Pop Smoke Teaches Data Engineering",
+          url: "https://www.instagram.com/reel/C8GEjYyA8NB/",
+          platform: "instagram",
+          viewsLabel: "767K views",
         },
       ],
     },
@@ -477,30 +497,6 @@ export const site: {
           url: "https://youtube.com/shorts/68qRbpaZEss?feature=share",
           platform: "youtube",
           viewsLabel: "4.5M views",
-        },
-      ],
-    },
-    {
-      title: "Viral Short-Form - Rappers Teach Engineering",
-      description: "Viral edutainment series.",
-      items: [
-        {
-          title: "21 Savage Teaches Security Engineering",
-          url: "https://www.instagram.com/reel/C6HjhEvgFb7/",
-          platform: "instagram",
-          viewsLabel: "2M views",
-        },
-        {
-          title: "Baby Keem Teaches System Design",
-          url: "https://www.instagram.com/reel/C5jZ-CRgzqh/",
-          platform: "instagram",
-          viewsLabel: "983K views",
-        },
-        {
-          title: "Pop Smoke Teaches Data Engineering",
-          url: "https://www.instagram.com/reel/C8GEjYyA8NB/",
-          platform: "instagram",
-          viewsLabel: "767K views",
         },
       ],
     },

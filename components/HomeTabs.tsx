@@ -410,8 +410,11 @@ export function HomeTabs(props: HomeTabsProps) {
               const visibleItems = hasMore && !isExpanded
                 ? section.items.slice(0, section.initialItemCount)
                 : section.items;
-              const landscape = visibleItems.filter((item) => !isPortraitVideo(item));
-              const portrait = visibleItems.filter(isPortraitVideo);
+              const grids = [
+                { className: "landscape-grid", items: visibleItems.filter((item) => !isPortraitVideo(item)) },
+                { className: "portrait-grid", items: visibleItems.filter(isPortraitVideo) },
+              ];
+              if (section.portraitFirst) grids.reverse();
               return (
                 <section key={section.title} className="work-section">
                   <div className="section-heading">
@@ -421,20 +424,13 @@ export function HomeTabs(props: HomeTabsProps) {
                     </div>
                     <span>{section.items.length} videos</span>
                   </div>
-                  {landscape.length ? (
-                    <div className="landscape-grid">
-                      {landscape.map((item) => (
+                  {grids.filter(({ items }) => items.length > 0).map(({ className, items }) => (
+                    <div key={className} className={className}>
+                      {items.map((item) => (
                         <VideoCard key={item.url} item={item} playing={playingUrls.includes(item.url)} onToggle={() => togglePlayer(item.url)} />
                       ))}
                     </div>
-                  ) : null}
-                  {portrait.length ? (
-                    <div className="portrait-grid">
-                      {portrait.map((item) => (
-                        <VideoCard key={item.url} item={item} playing={playingUrls.includes(item.url)} onToggle={() => togglePlayer(item.url)} />
-                      ))}
-                    </div>
-                  ) : null}
+                  ))}
                   {hasMore ? (
                     <button
                       type="button"
