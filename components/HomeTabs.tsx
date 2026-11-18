@@ -312,7 +312,7 @@ export function HomeTabs(props: HomeTabsProps) {
             </ul>
             <a
               className="availability-link"
-              href={`mailto:${props.email}?subject=Freelance%20video%20editing%20inquiry`}
+              href={`mailto:${props.email}?subject=Freelance%20video%20inquiry`}
             >
               <span className="availability-dot" aria-hidden="true" />
               <span>{props.availability}</span>

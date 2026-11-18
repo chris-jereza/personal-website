@@ -84,7 +84,7 @@ export const site: {
     { role: "Lead Producer and Host", organization: "BuzzFeed" },
     { role: "Growth Marketing Producer", organization: "Bryan Johnson’s Blueprint" },
   ],
-  availability: "Open for freelance video editing work",
+  availability: "Available for freelance video production, creative direction, and editing.",
   highlights: [],
 
   socials: [

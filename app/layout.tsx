@@ -14,23 +14,23 @@ const geistMono = Geist_Mono({
 });
 
 
+const description =
+  `Chris Jereza is a video producer at The Verge, previously at BuzzFeed. ${site.availability} Explore selected editorial, branded, and social videos.`;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrisjereza.io"),
   title: `${site.name} | Video Producer, Editor & Engineer`,
-  description:
-    "Chris Jereza is a video producer at The Verge, previously at BuzzFeed. Open for freelance video editing work. Explore selected editorial, branded, and social videos.",
+  description,
   openGraph: {
     title: `${site.name} | Video Producer, Editor & Engineer`,
-    description:
-      "Chris Jereza is a video producer at The Verge, previously at BuzzFeed. Open for freelance video editing work. Explore selected editorial, branded, and social videos.",
+    description,
     type: "website",
     images: [{ url: "/og.png", width: 1672, height: 941, alt: "Chris Jereza portfolio" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} | Video Producer, Editor & Engineer`,
-    description:
-      "Chris Jereza is a video producer at The Verge, previously at BuzzFeed. Open for freelance video editing work. Explore selected editorial, branded, and social videos.",
+    description,
     images: ["/og.png"],
   },
 };
