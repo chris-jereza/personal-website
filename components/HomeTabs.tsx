@@ -96,7 +96,7 @@ export type ClientBrief = {
 type HomeTabsProps = {
   name: string;
   tagline: string;
-  intro: string;
+  previousRoles: { role: string; organization: string }[];
   availability: string;
   highlights: string[];
   socials: ResolvedSocial[];
@@ -298,7 +298,14 @@ export function HomeTabs(props: HomeTabsProps) {
           <div className="min-w-0 flex-1">
             <p className="eyebrow">{props.tagline}</p>
             <h1 id="profile-title">{props.name}</h1>
-            <p className="profile-intro">{props.intro}</p>
+            <div className="profile-experience">
+              <p id="previous-roles-label">Previously</p>
+              <ul aria-labelledby="previous-roles-label">
+                {props.previousRoles.map(({ role, organization }) => (
+                  <li key={organization}>{role} at <strong>{organization}</strong></li>
+                ))}
+              </ul>
+            </div>
             <a
               className="availability-link"
               href={`mailto:${props.email}?subject=Freelance%20video%20editing%20inquiry`}
@@ -307,9 +314,6 @@ export function HomeTabs(props: HomeTabsProps) {
               <span>{props.availability}</span>
               <ArrowIcon />
             </a>
-            <div className="credential-row" aria-label="Selected experience">
-              <span>BuzzFeed</span><span>The Verge</span><span>Blueprint</span>
-            </div>
           </div>
 
           <dl className="proof-grid">

@@ -52,7 +52,7 @@ export const site: {
   tagline: string;
   profileImageUrl: string;
   profileImageAlt: string;
-  intro: string;
+  previousRoles: { role: string; organization: string }[];
   availability: string;
   highlights: string[];
   socials: SocialLink[];
@@ -73,8 +73,10 @@ export const site: {
   tagline: "Video Producer at The Verge / Editor",
   profileImageUrl: "/Chris Profile Photo 1.jpg",
   profileImageAlt: "Chris Jereza",
-  intro:
-    "Video producer at The Verge. Previously lead producer and host at BuzzFeed. 8+ years in production and post. 1.4M+ followers, 500M+ views annually across platforms.",
+  previousRoles: [
+    { role: "Lead Producer and Host", organization: "BuzzFeed" },
+    { role: "Growth Marketing Producer", organization: "Bryan Johnson’s Blueprint" },
+  ],
   availability: "Open for freelance video editing work",
   highlights: [],
 

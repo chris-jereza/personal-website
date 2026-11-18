@@ -212,7 +212,7 @@ export async function PortfolioHome({ clientBrief }: { clientBrief?: ClientBrief
     <HomeTabs
       name={site.name}
       tagline={site.tagline}
-      intro={site.intro}
+      previousRoles={site.previousRoles}
       availability={site.availability}
       highlights={site.highlights}
       socials={resolvedSocials}
