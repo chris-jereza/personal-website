@@ -318,6 +318,9 @@ export function HomeTabs(props: HomeTabsProps) {
               <span>{props.availability}</span>
               <ArrowIcon />
             </a>
+            <a className="profile-resume-link" href="/Chris_Jereza_Media_Resume.pdf">
+              Résumé (PDF)
+            </a>
           </div>
 
           <dl className="proof-grid">
